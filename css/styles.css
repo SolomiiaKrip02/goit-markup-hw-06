@@ -729,8 +729,7 @@ button {
     }
 
     .team-card {
-        width: 264px;
-        width: calc((100% - 24px) / 2);
+        width: calc((100% - 240px) / 2);
 
     }
 }
