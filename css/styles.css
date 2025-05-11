@@ -483,18 +483,30 @@ button {
 }
 
 .feature {
-    display: flex;
-    flex-direction: row;
-    gap: 96px;
+    padding: 96px 0;
 
+}
+
+.container {
+    max-width: 318px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .icon {
     display: none;
 }
 
+.feature-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+}
+
 .feature-sublitle {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -504,6 +516,7 @@ button {
 }
 
 .feature-item-text {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -513,9 +526,14 @@ button {
 
 @media screen and (min-width: 768px) {
 
+    .container {
+            max-width: 768px;
+        }
+
         .feature-menu {
-            display: flex;
-            
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 24px;
         }
     
         .feature-item {
@@ -523,12 +541,7 @@ button {
         }
 
         .feature-sublitle {
-            font-weight: 700;
-        }
-
-        .feature-item-text {
-            font-size: 16px;
-            line-height: 1.5;
+            text-align: left;
         }
 }
 
@@ -559,8 +572,8 @@ button {
     }
 
     .feature-sublitle {
+        font-weight: 500;
         font-size: 20px;
-        line-height: 1.2;
     }
         
 }
@@ -572,8 +585,9 @@ button {
 
 .team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 96px 0;
+    width: auto;
+    text-align: center;
 }
 
 .team-head {
@@ -585,12 +599,14 @@ button {
     color: #2e2f42;
     text-transform: capitalize;
     margin-bottom: 72px;
+
 }
 
 .team-class {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 24px;
 
 }
 
@@ -662,17 +678,35 @@ button {
     fill: #f4f4fd;
 }
 
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        }
 
+    .team-class {
+        gap: 64px 24px;
+    }
 
+    .team-card {
+        width: 264px;
+        width: calc((100% - 24px) / 2);
 
+    }
+}
 
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
 
+    .team {
+        padding: 120px 0;
+    }
 
-
-
-
-
-
+    .team-card {
+        width: calc((100% - 72px) / 4);
+    }
+}
 
 
 
@@ -690,10 +724,15 @@ button {
     padding-bottom: 96px;
 }
 
+.container {
+    min-width: 320px;
+}
+
 .footer-div {
-    max-width: 320px;
-    margin: 0 auto;
-    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .footer-logo {
@@ -705,8 +744,12 @@ button {
     text-transform: uppercase;
     color: #4d5ae5;
     display: inline-block;
-    padding: 0 86px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0;
 }
 
 .footer-logo-color {
@@ -723,8 +766,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    max-width: 264px;
-    padding-bottom: 72px;
+    max-width: 288px;
 }
 
 .footer-text-one {
@@ -741,13 +783,12 @@ button {
 .footer-class {
     display: flex;
     gap: 16px;
+    padding-left: 0;
 }
 
 .footer-item {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
 
 .footer-link {
@@ -787,12 +828,11 @@ button {
 }
 
 .footer-form {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 16px;
 }
 
 .footer-input {
-    width: 264px;
+    width: 288px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -803,10 +843,15 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
 }
 
-.placeholder {
+.footer-input::placeholder {
     color: #ffffff;
+    padding: 8px 0px;
 }
 
 .footer-button {
@@ -834,13 +879,102 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-    .footer-div {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .container {
+            max-width: 768px;
+        }
+    
+        .footer-div {
+            align-items: baseline;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            gap: 72px 24px;
+            padding-left: 108px;
+    
+        }
+    
+        .footer-text {
+            width: 264px;
+            margin-bottom: 0;
+        }
+    
+        .footer-logo {
+            justify-content: flex-start;
+        }
+    
+        .footer-item {
+            text-align: start;
+        }
+    
+        .footer-icon {
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 0px;
+        }
+
+        .footer-form {
+            min-width: 453px;
+        
+        }
+        
+        .footer-part {
+            justify-content: flex-start;
+        }
+        
+        .footer-form-field {
+            flex-direction: row;
+            gap: 24px;
+        }
+        
+        
+        .footer-label {
+            margin-bottom: 0;
+        }
+        
+        
+        .footer-input {
+            width: 264px;
+        }
+        
+        
+        
+        .footer-btn {
+            display: inline-flex;
+        }
+        
+        .footer-foto {
+            text-align: left;
+            justify-content: flex-start;
+            display: flex;
+        }   
+
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .footer-input {
-        flex-direction:row;
+    .footer-div {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0;
+        margin: 0 auto;
+    }
+
+    .footer-logo {
+        display: inline-block;
+    }
+
+    .footer-foto {
+        display: inline-block;
+    }
+
+    .footer-form {
+        margin-left: 80px;
     }
 }
 
