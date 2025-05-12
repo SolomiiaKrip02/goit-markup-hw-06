@@ -376,8 +376,6 @@ button {
     background: #2e2f42;
     padding-top: 72px;
     padding-bottom: 72px;
-    max-width: 340px;
-    max-height: 432px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -438,8 +436,6 @@ button {
 
 @media screen and (min-width: 768px) {
     .hero {
-        padding-bottom: 112px;
-        max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)), url(../images/img11.jpg);
     }
@@ -475,8 +471,6 @@ button {
     .hero {
         padding-top: 188px;;
         padding-bottom: 188px;;
-        max-width: 1440px;
-        max-height: 600px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)), url(../images/img11.jpg);
     }
@@ -540,7 +534,6 @@ button {
     display: flex;
     flex-direction: column;
     row-gap: 72px;
-    padding: 112px 0;
 }
 
 .feature-item {
@@ -648,7 +641,6 @@ button {
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 24px;
-
 }
 
 .team-card {
@@ -657,6 +649,7 @@ button {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+    margin-bottom: 72px;
 }
 
 .team-information {
@@ -1027,7 +1020,7 @@ button {
 }
 
 .container-footer-three {
-
+    margin-top: 72px;
 }
 
 .footer-text-two {
@@ -1038,8 +1031,6 @@ button {
     letter-spacing: 0.02em;
     color: #ffffff;
     padding: 0 107px;
-    margin-bottom: 16px;
-    margin-top: 72px;
 }
 
 .footer-form {
